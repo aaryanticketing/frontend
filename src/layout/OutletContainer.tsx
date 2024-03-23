@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import MovieCard from "../components/movie/movieCard";
 
 function OutletContainer({
     title,
@@ -21,45 +22,7 @@ function OutletContainer({
     breadcrumbs?: { label: string; link: string }[];
 }) {
     return (
-        <div>
-            {isLoading && <LinearProgress color="secondary" />}
-            <Box mt={3}>
-                <Container maxWidth="md">
-                    <Box
-                        mb={3}
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="space-between"
-                    >
-                        {title && <Typography variant="h4">{title}</Typography>}
-
-                        {breadcrumbs.length > 0 && (
-                            <Breadcrumbs aria-label="breadcrumb">
-                                {breadcrumbs.map((breadcrumb, index) => (
-                                    <>
-                                        {index < breadcrumbs.length - 1 ? (
-                                            <MUILink
-                                                component={Link}
-                                                underline="hover"
-                                                color="inherit"
-                                                to={breadcrumb.link}
-                                            >
-                                                {breadcrumb.label}
-                                            </MUILink>
-                                        ) : (
-                                            <Typography color="text.primary">
-                                                {breadcrumb.label}
-                                            </Typography>
-                                        )}
-                                    </>
-                                ))}
-                            </Breadcrumbs>
-                        )}
-                    </Box>
-                    <Box>{children}</Box>
-                </Container>
-            </Box>
-        </div>
+        <MovieCard imgUrl="https://via.placeholder.com/150" title="Movie 1" />
     );
 }
 
