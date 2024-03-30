@@ -31,14 +31,7 @@ export function TodoListPage() {
     return <Alert severity="error">Something went wrong</Alert>;
   }
   return (
-    <OutletContainer
-      title="To Do List"
-      isLoading={todosQuery.isLoading}
-      breadcrumbs={[
-        { label: "Home", link: "/" },
-        { label: "To Do List", link: "#" },
-      ]}
-    >
+    <OutletContainer>
       <TodoAddForm key={formKey} onAdd={resetForm} />
       {pendingCount === 0 && (
         <Alert severity="info">You have no pending items.</Alert>

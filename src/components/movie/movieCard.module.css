@@ -6,8 +6,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .movie img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 230px;
 }
 .movieTitle {
     background-color: #333;

@@ -19,15 +19,7 @@ export function TodoEditPage() {
   const todoId = parseInt(param || "", 10);
   const query = useGetTodoById(todoId);
   return (
-    <OutletContainer
-      title="Edit Item"
-      isLoading={query.isLoading}
-      breadcrumbs={[
-        { label: "Home", link: "/" },
-        { label: "To Do List", link: "/todos" },
-        { label: query.data?.title || "Edit Item", link: "#" },
-      ]}
-    >
+    <OutletContainer>
       {query.isError && <Alert severity="error">Something went wrong</Alert>}
       {query.isSuccess && query.data && <TodoEditForm item={query.data} />}
     </OutletContainer>
