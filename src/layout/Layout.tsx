@@ -2,7 +2,7 @@ import { useAuthContext } from "@asgardeo/auth-react";
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { useQuery } from "react-query";
 import styles from "./Layout.module.css";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export default function Layout() {
     return (
@@ -11,15 +11,10 @@ export default function Layout() {
                 <Toolbar>
                     <nav className={styles.topMenu}>
                         <div className={styles.topMenuLogo}>
-                            <Typography variant="h6">Todo App</Typography>
+                            <Typography variant="h6">Aaryan Ticketing</Typography>
                         </div>
                         <ul className={styles.topMainMenuUl}>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/todos">Todos</Link>
-                            </li>
+                            
                         </ul>
                         <ul className={styles.topUserMenuUl}>
                             <li>

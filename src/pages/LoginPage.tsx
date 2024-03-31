@@ -6,7 +6,7 @@ export function LoginPage() {
   return (
     <Stack spacing={2} alignItems="center" sx={{ m: 1 }}>
       <Typography variant="h4" align="center">
-        Todo List
+        Please Login
       </Typography>
       <Button variant="contained" onClick={() => signIn()}>
         Login

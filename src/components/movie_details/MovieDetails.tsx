@@ -98,8 +98,24 @@ function MovieDetails(){
                                                 'Authorization': `Bearer ${res.data.access_token}`
                                             }
                                         }).then((res2) => {
-                                            alert(res2);
-                                            alert(amount)
+                                            axios.post(`${window.config.todoApiUrl}/ticket`, 
+                                            {
+                                                "amount": String(Number(amount) * numTickets),
+                                                "id": "",
+                                                "movie_id": id,
+                                                "qty": String(numTickets),
+                                                "show_id": res2.data.id,
+                                                "user_id": "user@gmail.com"
+                                              }
+                                        , {
+                                            headers: {
+                                                'Authorization': `Bearer ${res.data.access_token}`
+                                            }
+                                        }).then((res3) => {
+                                            alert(`created show id: ${res2.data.id} and ticket id: ${res3.data.id}`);
+                                        }).catch((error) => {
+                                            console.error(error);
+                                        });
                                         }).catch((error) => {
                                             console.error(error);
                                         });
@@ -122,7 +138,24 @@ function MovieDetails(){
                                                 'Authorization': `Bearer ${res.data.access_token}`
                                             }
                                         }).then((res2) => {
-                                            alert(res2);
+                                            axios.post(`${window.config.todoApiUrl}/ticket`, 
+                                            {
+                                                "amount": String(Number(amount) * numTickets),
+                                                "id": "",
+                                                "movie_id": id,
+                                                "qty": String(numTickets),
+                                                "show_id": res2.data.id,
+                                                "user_id": "user@gmail.com"
+                                              }
+                                        , {
+                                            headers: {
+                                                'Authorization': `Bearer ${res.data.access_token}`
+                                            }
+                                        }).then((res3) => {
+                                            alert(`created show id: ${res2.data.id} and ticket id: ${res3.data.id}`);
+                                        }).catch((error) => {
+                                            console.error(error);
+                                        });
                                         }).catch((error) => {
                                             console.error(error);
                                         });
