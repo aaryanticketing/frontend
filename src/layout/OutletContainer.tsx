@@ -41,8 +41,8 @@ export default class OutletContainer extends React.Component {
       <div className={styles.container}>
         {
           this.state.movies
-            .map((movie: { image: string, movie_name: string }) =>
-              <MovieCard imgUrl={movie.image} title={movie.movie_name} />
+            .map((movie: { image: string, movie_name: string, description_text:string, id: string, start_date:string, end_date:string, amount:string }) =>
+              <MovieCard imgUrl={movie.image} title={movie.movie_name} description={movie.description_text} id={movie.id} start_date={movie.start_date} end_date={movie.end_date} amount={movie.amount}/>
             )
         }
       </div>

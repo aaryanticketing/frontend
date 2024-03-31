@@ -1,0 +1,20 @@
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 300px;
+    object-fit: contain;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.title {
+    font-size: 2em;
+    margin: 20px 0;
+}
+.description {
+    font-size: 1.2em;
+}

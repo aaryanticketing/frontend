@@ -8,6 +8,7 @@ import { TodoEditPage } from "./pages/TodoEditPage";
 import { TodoListPage } from "./pages/TodoListPage";
 import { Home } from "./pages/Home";
 import Layout from "./layout/Layout";
+import MovieDetails from "./components/movie_details/MovieDetails";
 
 function App() {
   const { state } = useAuthContext();
@@ -23,6 +24,7 @@ function App() {
             <Route path="/signin" element={<Navigate to="/" />} />
             <Route path="/" element={<Layout />}>
               <Route path="/todos/:id" element={<TodoEditPage />} />
+              <Route path="/movie-details/:id" element={<MovieDetails/>} />
               <Route path="/todos" element={<TodoListPage />} />
               <Route path="/" element={<Home />} />
               <Route path="*" element={<h1>Not Found</h1>} />
