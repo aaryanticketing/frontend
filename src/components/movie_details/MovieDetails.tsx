@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import styles from "./movieDetails.module.css";
+import styles from "./MovieDetails.module.css";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
