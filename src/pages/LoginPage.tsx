@@ -1,16 +1,11 @@
 import { useAuthContext } from "@asgardeo/auth-react";
-import { Button, Stack, Typography } from "@mui/material";
+import { useEffect } from "react";
 
 export function LoginPage() {
   const { signIn } = useAuthContext();
-  return (
-    <Stack spacing={2} alignItems="center" sx={{ m: 1 }}>
-      <Typography variant="h4" align="center">
-        Please Login
-      </Typography>
-      <Button variant="contained" onClick={() => signIn()}>
-        Login
-      </Button>
-    </Stack>
-  );
+  useEffect(() => {
+      signIn();
+  }, []); // The empty array causes this effect to only run once
+
+  return null; // Return null to render nothing
 }
